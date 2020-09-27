@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: 1
+  day: 1
+  value: 1.5
+
+two:
+  month: 1
+  day: 1
+  value: 1.5
