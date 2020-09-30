@@ -8,8 +8,6 @@
 
 require 'csv'
 
-Uf.destroy_all
-
 file_path = Rails.root.join("public", "UF_2019.csv")
     
 file = File.read(file_path.to_s)
