@@ -22,6 +22,6 @@ end
 
 for i in 0...parsed_file.length
     for j in 0...parsed_file[i].length
-        Uf.create(month: j + 1, day: i + 1, value: parsed_file[i][j])
+        Uf.create(month: j + 1, day: i + 1, value: parsed_file[i][j]) unless parsed_file[i][j].nil?
     end
 end
