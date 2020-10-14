@@ -9,15 +9,15 @@ class UfsController < ApplicationController
                     @date = Date.parse(params[:date])
                     if @date.month < 3
                         @uf = Uf.find_by(month: @date.month, day: @date.day)
+                        Request.create(client: request.headers['X-CLIENTE'])
                         render json: @uf.value
                     else
-                        render json: "Invalid date"
+                        render json: "Fecha inválida"
                     end
                 rescue ArgumentError
-                    render json: "Invalid date"
+                    render json: "Fecha inválida"
                 end
             end
         end
-        
     end
 end
